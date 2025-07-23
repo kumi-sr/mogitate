@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Season;
+use App\Http\Requests\ProductRequest;
 
 class ProductController extends Controller
 {
@@ -21,7 +22,7 @@ class ProductController extends Controller
             $query->orderBy('price', 'desc');
         }
 
-        $products = Product::paginate(6);
+        $products = $query->paginate(6);
         return view('products.index', compact('products'));
     }
     
@@ -30,7 +31,7 @@ class ProductController extends Controller
         return view('products.register');
     }
 
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
@@ -54,5 +55,10 @@ class ProductController extends Controller
         $product->seasons()->attach($seasons);
 
         return redirect()->route('products.index')->with('success', '商品を登録しました。');
+    }
+
+    public function show(Product $product)
+    {
+        return view('products.show', compact('product'));
     }
 }

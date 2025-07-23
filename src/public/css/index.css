@@ -1,8 +1,8 @@
 .product-index{
     display: flex;
-    gap: 40px;
-    padding: 40px 60px;
-    background-color:#f9f9f9;
+    gap: 20px;
+    padding: 50px 60px;
+    background-color: #f9f9f9;
     font-family: 'Noto Serif JP', serif;
     position: relative;
 }
@@ -31,12 +31,23 @@
 .sidebar .btn-yellow{
     width: 100%;
     background-color: #f5c518;
-    color: #fff;
+    color: #333;
     border: none;
     border-radius: 6px;
     padding: 10px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.btn-orange {
+    background-color: orange;
+    color: #333;
+    text-align: center;
+    padding: 0.5rem;
+    display: block;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 1rem;
 }
 
 .sidebar .btn-yellow:hover{
@@ -72,6 +83,12 @@
     width: 100%;
     height: 170px;
     object-fit: cover;
+}
+
+.product-grid a.product-card{
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .product-info{

@@ -24,9 +24,8 @@ input::placeholder {
 .header {
     display: grid;
     align-items: center;
-    padding: 16px 0;
-    height: 80px;
-    border: 1px solid #E0DFDE;
+    padding: 5px 0;
+    height: 60px;
     text-align: center;
     font-family: serif;
 
@@ -34,21 +33,20 @@ input::placeholder {
     grid-template-rows: 1fr;
 }
 
-.header__heading {
+.logo{
+    text-align: left;
     font-weight: lighter;
-    font-size: 32px;
+    font-size: 40px;
 
-    grid-column: 2;
+    grid-column: 1;
 }
 
 .header__link {
     margin: 0 auto;
-    width: 80px;
-    border: 1px solid #D9C6B5;
-    background-color: #F0F0F0;
-    color: #D9C6B5;
+    width: 100px;
+    background-color: #333;
+    color: #333;
     text-decoration: none;
-
     grid-column: 3;
 }
 
